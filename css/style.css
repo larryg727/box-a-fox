@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#gameContainer {
+    background: url("../img/grass.svg") no-repeat top center local;
+    background-size: cover;
+    height: 1100px;
+    width: 100%;
+    margin: -250px 0 0 0;
+    padding: 0;
+    cursor: url("../img/Boxing2.png"), auto;
+    position: relative;
+}
+
+#start {
+    position: absolute;
+    top:300px;
+    left:300px
+}
+
+#holeContainer{
+    margin: 0 auto;
+    width: 850px;
+    padding-top: 560px;
+}
+
+.hide {
+    width:140px;
+    height: 90px;
+    overflow: hidden;
+    margin: 30px;
+    display: inline-block;
+    position: relative;
+    border-bottom-right-radius: 49%;
+    border-bottom-left-radius: 49%;
+
+}
+
+.holes {
+    background-color: #4b2511;
+    border: 3px solid black;
+    border-radius: 100%;
+    width: 125px;
+    height: 65px;
+    position: absolute;
+    bottom: 0;
+    left:5px;
+    margin: 0 auto;
+}
+
+.fox {
+    width: 170px;
+    margin: 0 auto;
+    position:absolute;
+    bottom: -140px;
+    left: -20px;
+}
