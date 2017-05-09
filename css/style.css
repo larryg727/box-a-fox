@@ -13,12 +13,40 @@ body {
     padding: 0;
     cursor: url("../img/Boxing2.png"), auto;
     position: relative;
+
+}
+
+#title {
+    position: absolute;
+    top: 200px;
+    left: 20%;
 }
 
 #start {
     position: absolute;
-    top:300px;
-    left:300px
+    top:475px;
+    left: 44%;
+}
+
+#time {
+    position: absolute;
+    top: 280px;
+    left: 25%;
+    background-color: black;
+    border: 10px solid red;
+    border-radius: 25%;
+    width: 200px;
+    height: 150px;
+    color: red;
+    font-size: 10em;
+    text-align: center;
+    padding-bottom: 50px;
+    display: none;
+}
+
+#time > p {
+    font-size: .12em;
+    margin: 10px 0 0 0;
 }
 
 #holeContainer{

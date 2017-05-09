@@ -43,11 +43,23 @@ $(document).ready(function () {
         }, 3000)
     }
 
+    //timer function
+    function timer() {
+        setInterval(function(){
+            var i = 0;
+            i++;
+            var timeLeft = 30 - i;
+            $("#remainingTime").html(timeLeft);
+        }, 1000);
+    }
+
     //start button to start game
     $("#start").click(function(){
-    setTimeout(function(){
-        gameFlow()
-    }, 1000);
+        $("#title").fadeOut(1500);
+        $("#start").fadeOut(1500, function(){
+            $("#time").slideDown(1000);
+        });
+        gameFlow();
     });
 
     //click functions
