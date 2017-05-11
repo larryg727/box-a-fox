@@ -32,15 +32,13 @@ $(document).ready(function () {
     function playGame(){
         idVar = "#h-" + random;
         $(idVar).children().attr("src", "img/fox2.png");
-        $(idVar).parent().attr("clickable", "true");
+
         $(idVar).children().animate({
             bottom: "-40px"
         }, 1500).animate({
             bottom: "-140px"
         }, 1500);
-        setTimeout(function(){
-            $(".hide").attr("clickable", "false");
-        }, 2600);
+
     }
 
 
@@ -49,13 +47,13 @@ $(document).ready(function () {
     function gameFlow(){
         if(continuePlay) {   //stops function recursion
         speed = 3000; // sets initial speed.
-        if(score > 20){   // speed increases in foxes
+        if(score > 18){   // speed increases in foxes
             speed = 500;
-        }else if(score >12){
+        }else if(score >10){
             speed = 1000;
-        }else if(score > 8){
+        }else if(score > 6){
             speed = 1500;
-        }else if(score > 4){
+        }else if(score > 3){
             speed = 2000;
         }else if(score > 1){
             speed = 2400;
@@ -103,7 +101,7 @@ $(document).ready(function () {
         $(this).children().children().attr("src", "img/foxhit.png");
        var clickable = $(this).attr("clickable");
        console.log(clickable);
-        if(clickable === "true") {
+        if ( $(this).children().children().is(":animated" ) && continuePlay) {
             score += 1;
             $("#score").text(score);
         }
