@@ -93,6 +93,8 @@ $(document).ready(function () {
         timeLeft = 30;
         score = 0;
         continuePlay = true;
+        $("#score").text(score);
+        $("#remainingTime").text(timeLeft);
         gameFlow();
         setTimeout(function(){
             timing = setInterval(timer, 1500);

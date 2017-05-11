@@ -1,3 +1,9 @@
+
+@font-face {
+    font-family: 'MyWebFont';
+    src: url("../digital-7 (mono).ttf");
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -42,11 +48,12 @@ body {
     text-align: center;
     padding-bottom: 50px;
     display: none;
+    font-family: 'MyWebFont';
 }
 
 #time > p, #scoreBoard > p {
     font-size: .12em;
-    margin: 10px 0 0 0;
+    margin: 10px 0 20px 0;
 }
 
 #scoreBoard {
@@ -63,14 +70,25 @@ body {
     text-align: center;
     padding-bottom: 50px;
     display: none;
+    font-family: 'MyWebFont';
 }
 
 #gameOver {
     position: absolute;
-    top: 680px;
-    right: 40%;
-    font-size: 3em;
+    top: 670px;
+    right: 23%;
     display:none;
+    background-color: black;
+    border: 10px solid red;
+    border-radius: 0;
+    width: 800px;
+    height: 150px;
+    color: red;
+    font-size: 10em;
+    text-align: center;
+    padding-bottom: 50px;
+    font-family: Impact;
+    z-index: 4;
 }
 
 #holeContainer{
