@@ -44,15 +44,25 @@ body {
     display: none;
 }
 
-#time > p {
+#time > p, #scoreBoard > p {
     font-size: .12em;
     margin: 10px 0 0 0;
 }
 
-#score {
+#scoreBoard {
     position: absolute;
     top: 280px;
     right: 25%;
+    background-color: black;
+    border: 10px solid red;
+    border-radius: 25%;
+    width: 200px;
+    height: 150px;
+    color: red;
+    font-size: 10em;
+    text-align: center;
+    padding-bottom: 50px;
+    display: none;
 }
 
 #gameOver {

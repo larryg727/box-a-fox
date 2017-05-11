@@ -87,7 +87,10 @@ $(document).ready(function () {
         $("#title").fadeOut(1500);
         $("#start").fadeOut(1500, function(){
             $("#time").slideDown(1000);
+            $("#scoreBoard").slideDown(1000);
         });
+        $("#gameOver").fadeOut();
+        timeLeft = 30;
         score = 0;
         continuePlay = true;
         gameFlow();
@@ -115,6 +118,7 @@ $(document).ready(function () {
         clearInterval(timing);
         clearInterval(gameSpeed);
         $("#gameOver").show();
+        $("#start").fadeIn();
     }
 
 });
