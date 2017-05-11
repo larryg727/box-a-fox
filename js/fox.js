@@ -6,8 +6,10 @@ $(document).ready(function () {
     "use strict";
     /*-------global variables----------*/
     var random;
-    var idVar
-
+    var idVar;
+    var timeLeft = 5;
+    var score;
+    var timing;
 
     /*-------functions-----------*/
 
@@ -39,18 +41,20 @@ $(document).ready(function () {
     function gameFlow(){
         setInterval(function(){
             randomGen();
-            playGame()
+            playGame();
         }, 3000)
+
     }
 
     //timer function
     function timer() {
-        setInterval(function(){
-            var i = 0;
-            i++;
-            var timeLeft = 30 - i;
-            $("#remainingTime").html(timeLeft);
-        }, 1000);
+        if (timeLeft == 0){
+            $("#remainingTime").text(timeLeft);
+            gameOver();
+        }else if (timeLeft > 0) {
+            $("#remainingTime").text(timeLeft);
+        }
+        timeLeft--;
     }
 
     //start button to start game
@@ -59,12 +63,24 @@ $(document).ready(function () {
         $("#start").fadeOut(1500, function(){
             $("#time").slideDown(1000);
         });
+        score = 0;
         gameFlow();
+        setTimeout(function(){
+            timing = setInterval(timer, 1500);
+        }, 2000)
     });
 
     //click functions
     $(".hide").click(function(){
         $(this).children().children().attr("src", "img/foxhit.png");
+        score += 1;
+        $("#score").text(score);
     })
+
+    //gameover function
+    function gameOver(){
+        clearInterval(timing);
+        $("#gameOver").show();
+    }
 
 });

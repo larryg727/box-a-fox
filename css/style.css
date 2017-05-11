@@ -49,6 +49,20 @@ body {
     margin: 10px 0 0 0;
 }
 
+#score {
+    position: absolute;
+    top: 280px;
+    right: 25%;
+}
+
+#gameOver {
+    position: absolute;
+    top: 680px;
+    right: 40%;
+    font-size: 3em;
+    display:none;
+}
+
 #holeContainer{
     margin: 0 auto;
     width: 850px;
